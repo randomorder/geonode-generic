@@ -48,6 +48,15 @@ catalog:
           default: "GeoNode"
           type: string
 
+        - variable: "ENABLE_HTTPS"
+          label: "Enable HTTPS in NGINX"
+          description: |
+              Set to true to enable HTTPS in NGINX config. file,
+              if enabled SSL key/certificate must be provided by the user.
+          required: true
+          type: boolean
+          default: false
+
         - variable: "ADMIN_EMAILS"
           label: "List of admin emails"
           description: |

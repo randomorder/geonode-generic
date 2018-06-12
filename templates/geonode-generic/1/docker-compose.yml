@@ -111,6 +111,9 @@ services:
       - "${NGINX_PORT_MAPPING}"
     volumes:
       - statics:/mnt/volumes/statics
+    environment:
+      ENABLE_HTTPS: {{ .Values.ENABLE_HTTPS }}
+      NGINX_HOST: "${SITEURL}"
 
 
   data-dir-conf:
